@@ -11,7 +11,9 @@ SOURCE=$(cd "$1" && pwd)
 [ ! -d "$SOURCE" ] && echo "Can't find source path." && exit 1
 
 START=$PWD
-MSG=${2:-"Another commit"}
+EMOJIS=(😺 😸 😹 😻 😼 😽 🙀 😿 😾)
+EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+MSG=${2:-"$EMOJI"}
 DEST="$KATACODA_DIR/$(basename $SOURCE)"
 
 [ ! -d "$DEST" ] && echo "Can't find destination path. Please create $DEST and try again." && exit 1
