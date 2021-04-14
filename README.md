@@ -22,7 +22,7 @@ For new scenarios, you must manually create the destination directory in your Ka
 
 `pubkat [source path] [optional commit message]` 
 
-If you don't provide a commit message, the default "Another commit." will be used.
+If you don't provide a commit message, a random commit message will be created for you consisting of one of these emojis: 😺 😸 😹 😻 😼 😽 🙀 😿 😾.
 
 `pubkat ~/Code/LearningLabs/new-course "My low-value commit message"`
 
