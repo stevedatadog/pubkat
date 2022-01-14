@@ -8,6 +8,10 @@
 # Expand relative paths, if any
 SOURCE=$(cd "$1" && pwd)
 
+if grep -q $KATACODA_DIR <<< $SOURCE; then
+  echo "Not intended for use in your Katacoda scenario directory." && exit 1
+fi
+
 [ ! -d "$SOURCE" ] && echo "Can't find source path." && exit 1
 
 START=$PWD
