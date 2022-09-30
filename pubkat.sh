@@ -29,5 +29,5 @@ cp -r $SOURCE/* $DEST/
 cd $DEST
 git add .
 git commit -m "$MSG"
-git push origin master
+git push origin main
 cd $START
